@@ -1,0 +1,23 @@
+name: Example
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out ...
+        uses: actions/checkout@v2
+
+      - name: Setup Go 1.18
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.18
+
+      - name: Scripts
+        uses: alinz/script.go@v0.0.1
+        with:
+          paths: "./github/workflows/one,./github/workflows/two"
