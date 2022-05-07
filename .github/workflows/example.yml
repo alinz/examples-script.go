@@ -20,4 +20,5 @@ jobs:
       - name: Scripts
         uses: alinz/script.go@main
         with:
-          paths: "~/.github/workflows/one,~/.github/workflows/two"
+          workspace: ${{ github.github_workspace }}
+          paths: .github/workflows/one,.github/workflows/two
