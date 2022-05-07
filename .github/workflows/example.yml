@@ -20,4 +20,4 @@ jobs:
       - name: Scripts
         uses: alinz/script.go@v0.0.2
         with:
-          paths: "./github/workflows/one,./github/workflows/two"
+          paths: "~/.github/workflows/one,~/.github/workflows/two"
